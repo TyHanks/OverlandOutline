@@ -15,7 +15,9 @@
     <body>
 
         <!-- Just some bs filler html -->
-        <p>Hello welcome to OverlandOutline {{ name }}</p>
+        {% for key, value in context.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
 
         <!-- Import Javascript Files -->
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
